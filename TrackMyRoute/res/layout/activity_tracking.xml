@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@drawable/activity_background"
+    tools:context=".Tracking" >       
+        
+    <RelativeLayout
+       	android:id="@+id/wait_for_signal_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+    
+        <TextView
+	        android:id="@+id/wait_for_signal_label"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="6dp"
+	        android:lines="1"
+	        android:text="@string/wait_for_signal"
+	        android:gravity="center_horizontal"
+	        android:layout_centerInParent="true"
+	        android:textSize="16sp"/>
+                 
+        <ImageView
+	        android:id="@+id/loading_image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/loading" 
+	        android:layout_below="@+id/wait_for_signal_label"
+	        android:contentDescription="@string/loading"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="10dp"
+	        android:layout_centerInParent="true"/>
+	</RelativeLayout>
+     
+    <LinearLayout
+        android:id="@+id/tracking_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingTop="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        	
+        <TextView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:textSize="20sp"
+		    android:textStyle="bold"
+		    android:paddingBottom="10dp"
+		    android:text="@string/now_tracking" />
+        
+        <LinearLayout 	    
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="16dp"
+		    android:paddingRight="16dp"
+		    android:paddingBottom="30dp"
+		    android:orientation="horizontal"> 
+        	    	                
+			<TextView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0.5"
+			    android:gravity="right"
+			    android:paddingRight="10dp"
+			    android:text="@string/time"
+			    android:textStyle="bold" />
+		
+		    <TextView
+		        android:id="@+id/trackingTime"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.5"
+		        android:gravity="left"
+			    android:paddingLeft="10dp"		        
+		        android:text="" />
+	    
+	    </LinearLayout>
+
+       	<LinearLayout 	    
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="16dp"
+		    android:paddingRight="16dp"
+		    android:paddingBottom="30dp"
+		    android:orientation="horizontal"> 
+		    
+		    <TextView
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.5"
+		        android:gravity="right"
+			    android:paddingRight="10dp"
+		        android:text="@string/distance"
+		        android:textStyle="bold" />
+		
+		    <TextView
+		        android:id="@+id/trackingDistance"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+			    android:paddingLeft="10dp"	
+		        android:layout_weight="0.5"		        
+		        android:text="" />			   		        	                      
+	    	               		
+	    </LinearLayout>
+		    
+       	<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="16dp"
+		    android:paddingRight="16dp"
+		    android:paddingBottom="30dp"
+		    android:orientation="horizontal"> 
+			    
+	   		<TextView			    
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="right"
+			    android:paddingRight="10dp"
+			    android:layout_weight="0.5"
+			    android:textStyle="bold"
+			    android:text="@string/average_speed" />                        		
+		
+		    <TextView
+		        android:id="@+id/trackingSpeed"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="left"
+			    android:paddingLeft="10dp"	
+		        android:layout_weight="0.5"		        	       
+		        android:text="" />
+	    
+	    </LinearLayout>
+		    
+	    <Button
+            android:id="@+id/stop_tracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_tracking" />
+	    
+	</LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/activity_background"    
+    tools:context=".Information" >
+
+    <TextView
+       	android:id="@+id/info_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"  
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" 
+        android:layout_below="@+id/info_label"
+        android:paddingBottom="30dp"
+        android:text="@string/info_body" />
+    
+    <TextView
+       	android:id="@+id/version_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_text"
+        android:textStyle="bold"  
+        android:text="@string/version" />
+    
+    <TextView
+        android:id="@+id/version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_below="@+id/version_label"
+        android:paddingBottom="30dp"
+        android:text="" />
+    
+    <TextView
+       	android:id="@+id/build_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/version_text"
+        android:textStyle="bold"  
+        android:text="@string/buildDate" />
+    
+    <TextView
+        android:id="@+id/build_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_below="@+id/build_date_label"
+        android:paddingBottom="30dp"
+        android:text="" />
+    
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/activity_background"
+    tools:context=".Routes" >          
+    
+	<LinearLayout 	    
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:orientation="vertical"
+	    tools:context=".Home" >
+	
+	    <ImageView	    
+			android:id="@+id/logo_image"   
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/app_name"
+			android:layout_marginTop="30dp"				
+			android:layout_marginLeft="10dp"
+			android:layout_marginBottom="30dp"
+			android:src="@drawable/logoname" />
+	    
+	    <Button
+	        android:id="@+id/start_tracking"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"       
+	        android:text="@string/start_tracking"	        
+	        android:drawableLeft="@drawable/raceflag"/>
+	
+	    <Button
+	        android:id="@+id/my_routes"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"        
+	        android:text="@string/my_routes"	        
+	        android:layout_marginTop="16dp" 
+	        android:drawableLeft="@drawable/routes"/>		   
+	    
+	</LinearLayout>
+	
+	<ImageView	    
+		android:id="@+id/gps_status_image"   
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/app_name"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="10dp"
+		android:layout_marginBottom="10dp"
+		android:src="@drawable/satellite_dish" />
+	
+	<TextView
+        android:id="@+id/gps_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gps_disabled"	        
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="35dp"
+        android:layout_alignParentBottom="true"	        
+        android:layout_marginTop="16dp"/>
+	
+	<ImageView	    
+		android:id="@+id/info_image"   
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/app_info"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginBottom="10dp"			
+		android:src="@drawable/info" />
+	
+</RelativeLayout>

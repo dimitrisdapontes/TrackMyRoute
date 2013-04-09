@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TrackMyRoute</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="meters">meters</string>
+    <string name="seconds">seconds</string>
+    <string name="app_info">Info</string>
+
+    <!-- Menu -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_dump_log">Dump Log</string>
+    <string name="menu_dump_database">Dump Database</string>
+    <string name="menu_update_routes">Update Routes</string>
+
+    <!-- Home Activity -->
+    <string name="start_tracking">Start Tracking</string>
+    <string name="my_routes">My Routes</string>
+    <string name="gps_enabled">GPS Enabled</string>
+    <string name="gps_disabled">GPS Disabled</string>
+    <string name="title_activity_routes">Routes</string>
+
+    <!-- Routes Activity -->
+
+
+    <!-- Routes List Fragment -->
+    <string name="no_routes">No routes found</string>
+    <string name="title_activity_tracking">Tracking</string>
+
+    <!-- Tracking Activity -->
+    <string name="time">Time</string>
+    <string name="distance">Distance</string>
+    <string name="average_speed">Average Speed</string>
+    <string name="wait_for_signal">Waiting for GPS Signal</string>
+    <string name="loading">Loading</string>
+    <string name="enable_gps">Enable GPS</string>
+    <string name="no_gps_signal_found">No GPS signal found</string>
+    <string name="cannot_track_without_gps">Cannot track without GPS</string>
+    <string name="retry_gps_connection">Retry connection</string>
+    <string name="stop_waiting_gps_connection">Stop waiting</string>
+    <string name="stop_tracking">Stop tracking</string>
+    <string name="title_activity_route_info">RouteInfo</string>
+    <string name="now_tracking">Now Tracking</string>
+    
+    <!-- Information Activity -->
+    <string name="info_body">Demo application used for demonstration of gps functionality</string>
+    <string name="version">Version</string>
+    <string name="buildDate">Build Date</string>
+
+    <!-- RouteInfo Activity -->
+    <string name="route_label">Route</string>
+    <string name="route_date_label">When</string>
+    <string name="total_distance_label">Total Distance</string>
+    <string name="total_time_label">Total Time</string>
+
+    <!-- RouteInfo Menu -->
+    <string name="menu_center_route">Center Route</string>
+    <string name="title_activity_information">Information</string>
+    <string name="action_settings">Settings</string>
+    
+    
+    <!-- Utilities -->
+    <string name="meters">meters</string>
+    <string name="meters_short">m</string>
+    <string name="hours">hours</string>
+    <string name="hours_short">h</string>
+    <string name="minutes">minutes</string>
+    <string name="minutes_short">m</string>
+    <string name="seconds">seconds</string>
+    <string name="seconds_short_short">s</string>
+    <string name="kilometersperhour_short">Km/h</string>    
+
+</resources>

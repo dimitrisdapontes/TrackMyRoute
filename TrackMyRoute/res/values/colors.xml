@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+    <color name="layout_border">#888888</color>
+    <color name="title_background">#4c7c20</color>
+    <color name="activity_background">#FF6600</color>
+</resources>

@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    android:orientation="vertical"
+    android:background="@drawable/activity_background"
+    tools:context=".RouteInfo" >
+
+    <LinearLayout         
+        android:layout_width="fill_parent"        
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal" >	                                   
+        
+			<TextView			    
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:layout_weight="0.2"
+			    android:textStyle="bold"
+			    android:text="@string/time" />                        		
+		
+		    <TextView
+		        android:id="@+id/routeDate"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:layout_weight="0.8"
+		        android:text="" />		    		   		        	               
+   
+    </LinearLayout>
+
+    <LinearLayout	    
+	    android:id="@+id/route_info_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:baselineAligned="false"
+	    android:paddingTop="10dp"	    
+	    android:paddingBottom="10dp"
+	    android:orientation="horizontal">
+	    
+        	<LinearLayout 	        
+		        android:layout_width="wrap_content"        
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.5"
+		        android:layout_marginRight="3dp"
+		        android:background="@drawable/border"
+		        android:orientation="vertical" >
+		    
+		        <TextView			       	
+			        android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:gravity="center"
+		        	android:textStyle="bold"
+			        android:text="@string/total_distance_label" />
+			
+			    <TextView
+			       	android:id="@+id/totalDistance"
+			        android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:gravity="center"
+			        android:text="" />
+			    
+		    </LinearLayout>
+	    
+        	<LinearLayout	        
+		        android:layout_width="wrap_content"        
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.5"		
+		        android:background="@drawable/border"       		        
+		        android:orientation="vertical" >
+	    
+			    <TextView			       	
+			        android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"	
+		        	android:gravity="center"      
+		        	android:textStyle="bold"  
+			        android:text="@string/total_time_label" />
+			
+			    <TextView
+			       	android:id="@+id/totalTime"
+			        android:layout_width="fill_parent"
+			        android:gravity="center"
+		        	android:layout_height="wrap_content"
+			        android:text="" />
+			    
+		    </LinearLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 	    
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent" 
+	    android:orientation="vertical">    
+        
+        <fragment 	        
+			android:id="@+id/routeMap"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"			
+			class="com.google.android.gms.maps.SupportMapFragment"/>
+        
+    </LinearLayout>
+        
+</LinearLayout>
