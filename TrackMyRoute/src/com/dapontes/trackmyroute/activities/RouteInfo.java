@@ -24,6 +24,7 @@ import android.support.v4.content.Loader;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.bugsense.trace.BugSenseHandler;
@@ -206,7 +207,12 @@ public class RouteInfo extends FragmentActivity implements LoaderManager.LoaderC
                 
         // move the map to the route bounds
         routeBounds = boundsBuilder.build();
-        map.moveCamera(CameraUpdateFactory.newLatLngBounds(routeBounds, 20));
+        
+        // use the newLatLngBounds with width / height to avoid exceptions during map initialization                     
+        View mapView = ((SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.routeMap)).getView();
+        int width = mapView.getWidth();
+        int height = mapView.getHeight();
+        map.moveCamera(CameraUpdateFactory.newLatLngBounds(routeBounds, width, height, 20));
     }
     
     /**
