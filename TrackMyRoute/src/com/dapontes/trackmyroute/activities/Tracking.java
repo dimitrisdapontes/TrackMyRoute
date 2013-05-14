@@ -47,7 +47,8 @@ public class Tracking extends FragmentActivity
     private static final String TAG = "Tracking";
     
     /**
-     * Debug variable used to indicate whether the GPS or the NETWORK provided should be used
+     * Debug variable used to indicate whether the GPS or the NETWORK provided should be used 
+     * (Used mainly for debugging purposes)
      */
     private static final boolean useGps = true;
     
@@ -155,7 +156,16 @@ public class Tracking extends FragmentActivity
             {
                 currentRoute = RoutesTable.getRoute(cursor);
                 currentRoute.finalize(Tracking.this, new Date());
+                cursor.close();
+                
+                // re-query the route to get it with all the new info (total meters, total seconds)
+                cursor = getContentResolver().query(uri, null, null, null, null);
+                if (cursor.moveToNext())
+                {
+                    currentRoute = RoutesTable.getRoute(cursor);
+                }
             }
+            cursor.close();
             
             finish();
             
@@ -377,6 +387,7 @@ public class Tracking extends FragmentActivity
                         startClockTimer();
                     }
                 }
+                cursor.close();
             }
             
             Position position = new Position(location.getLongitude(), location.getLatitude(), new Date(location.getTime()), currentRouteId);
@@ -561,7 +572,8 @@ public class Tracking extends FragmentActivity
                 }                
                 
                 previousLocation = currentLocation;
-            }                       
+            }
+            positionsCursor.close();
         }
         
         if (newLocation != null)
@@ -580,6 +592,7 @@ public class Tracking extends FragmentActivity
                     trackRouteMeters += previousLocation.distanceTo(newLocation);
                 }
             }
+            cursor.close();
         }
         
         // update the views in the activity

@@ -37,6 +37,7 @@ public class RoutesLoader extends AsyncTaskLoader<List<Route>>
         {
             routes.add(RoutesTable.getRoute(cursor));
         }
+        cursor.close();
         
         return routes;        
     }

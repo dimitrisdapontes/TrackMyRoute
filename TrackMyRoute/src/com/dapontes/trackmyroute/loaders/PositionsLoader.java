@@ -42,6 +42,7 @@ public class PositionsLoader extends AsyncTaskLoader<List<Position>>
         {
             positions.add(PositionsTable.getPosition(cursor));
         }
+        cursor.close();
         
         return positions;        
     }

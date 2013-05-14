@@ -57,6 +57,7 @@ public class Route implements Parcelable
             
             previousLocation = currentLocation; 
         }
+        positionCursor.close();
         
         // update the record in the database
         String where = RoutesTable.COLUMN_ID + "=" + id;
